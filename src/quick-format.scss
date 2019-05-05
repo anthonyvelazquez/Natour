@@ -1,0 +1,376 @@
+// Border Radius: 8px 100px
+// Font Scale(Golden Ratio 1:1.618): 0.618rem 1 rem 1.618rem 2.618rem 4.236rem 6.854rem
+// Font Scale(Simplified): 12 14 16 18 20 24 30 36 48 60 72
+// Spacing Scale: 4 8 12 16 24 32 48 64 96 128 192 256 384 512 640 768
+
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.m8 {
+    margin: 8rem;
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+.mt2 {
+    margin-top: 2rem;
+}
+
+.mt4 {
+    margin-top: 4rem;
+}
+
+.mt8 {
+    margin-top: 8rem;
+}
+
+.mt12 {
+    margin-top: 12rem;
+}
+
+.mt16 {
+    margin-top: 16rem;
+}
+
+.mt24 {
+    margin-top: 24rem;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mb2 {
+    margin-bottom: 2rem;
+}
+
+.mb4 {
+    margin-bottom: 4rem;
+}
+
+.mb8 {
+    margin-bottom: 8rem;
+}
+
+.mb12 {
+    margin-bottom: 12rem;
+}
+
+.mb16 {
+    margin-bottom: 16rem;
+}
+
+.mb24 {
+    margin-bottom: 24rem;
+}
+
+.ml0 {
+    margin-left: 0;
+}
+
+.ml4 {
+    margin-left: 4rem;
+}
+
+.ml8 {
+    margin-left: 8rem;
+}
+
+.ml12 {
+    margin-left: 12rem;
+}
+
+.ml16 {
+    margin-left: 16rem;
+}
+
+.ml24 {
+    margin-left: 24rem;
+}
+
+.mr0 {
+    margin-right: 0;
+}
+
+.mr4 {
+    margin-right: 4rem;
+}
+
+.mr8 {
+    margin-right: 8rem;
+}
+
+.mr12 {
+    margin-right: 12rem;
+}
+
+.mr16 {
+    margin-right: 16rem;
+}
+
+.mr24 {
+    margin-right: 24rem;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.p4 {
+    padding: 4rem;
+}
+
+.p8 {
+    padding: 8rem;
+}
+
+.p12 {
+    padding: 12rem;
+}
+
+.pt0 {
+    padding-top: 0;
+}
+
+.pt4 {
+    padding-top: 4rem;
+}
+
+.pt8 {
+    padding-top: 8rem;
+}
+
+.pt12 {
+    padding-top: 12rem;
+}
+
+.pt16 {
+    padding-top: 16rem;
+}
+
+.pt24 {
+    padding-top: 24rem;
+}
+
+.pb0 {
+    padding-bottom: 0;
+}
+
+.pb4 {
+    padding-bottom: 4rem;
+}
+
+.pb8 {
+    padding-bottom: 8rem;
+}
+
+.pb12 {
+    padding-bottom: 12rem;
+}
+
+.pb16 {
+    padding-bottom: 16rem;
+}
+
+.pb24 {
+    padding-bottom: 24rem;
+}
+
+.pl0 {
+    padding-left: 0;
+}
+
+.pl4 {
+    padding-left: 4rem;
+}
+
+.pl8 {
+    padding-left: 8rem;
+}
+
+.pl12 {
+    padding-left: 12rem;
+}
+
+.pl16 {
+    padding-left: 16rem;
+}
+
+.pl24 {
+    padding-left: 24rem;
+}
+
+.pr0 {
+    padding-right: 0;
+}
+
+.pr4 {
+    padding-right: 4rem;
+}
+
+.pr8 {
+    padding-right: 8rem;
+}
+
+.pr12 {
+    padding-right: 12rem;
+}
+
+.pr16 {
+    padding-right: 16rem;
+}
+
+.pr24 {
+    padding-right: 24rem;
+}
+
+.abs {
+    position: absolute
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.block-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.block-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flx {
+    flex-grow: 1;
+}
+
+.flx-stretch {
+    align-self: stretch;
+}
+
+.flx-j-c {
+    justify-content: center;
+}
+
+.flx-j-s {
+    justify-content: flex-start;
+}
+
+.flx-j-b {
+    justify-content: space-between;
+}
+
+.flx-j-e {
+    justify-content: space-evenly;
+}
+
+.flx-a-c {
+    align-items: center;
+}
+
+.flx-a-s {
+    align-items: flex-start;
+}
+
+.flx-wrap {
+    flex-wrap: wrap;
+}
+
+.click-pointer {
+    cursor: pointer;
+}
+
+.wait-pointer {
+    cursor: wait;
+}
+
+.not-pointer {
+    cursor: not-allowed;
+}
+
+.overflow-dot {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.overflow-scroll-x {
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+}
+
+.overflow-scroll-y {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.no-scale {
+    transform: scale(1) !important
+}
+
+.no-scale:hover {
+    transform: scale(1) !important
+}
+
+.no-bg {
+    background: none;
+}
+
+.no-border {
+    border: none;
+}
+
+.no-shadow {
+    box-shadow: none;
+}
+
+.no-right-border {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.no-left-border {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.grid-full-col {
+    grid-column: 1 / -1;
+}
+
+.grid-full-row {
+    grid-row: 1 / -1;
+}
