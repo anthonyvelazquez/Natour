@@ -4,6 +4,10 @@
     background-color: #f7f7f7;
     padding: 25rem 0;
     margin-top: -20vh;
+
+    @include responsive(tab-port) {
+        padding: 20rem 0;
+    }
 }
 
 .mb-small {
@@ -75,6 +79,16 @@
         box-shadow: 0 1rem 3rem rgba($color-black, .2);
         text-align: center;
         cursor: pointer;
+
+        @include responsive(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include responsive(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__background {
@@ -88,7 +102,15 @@
         z-index: 500;
         transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
 
-        // transform: scale(80);
+        @include responsive(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include responsive(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__nav {
@@ -246,6 +268,10 @@
     & > * {
         transform: skewY(7deg);
     }
+
+    @include responsive(tab-port) {
+        padding: 20rem 0;
+    }
 }
 
 .feature-box {
@@ -279,6 +305,10 @@
     background-color: #f7f7f7;
     padding: 25rem 0 15rem 0;
     margin-top: -10rem;
+
+    @include responsive(tab-port) {
+        padding: 20rem 0 10rem 0;
+    }
 }
 
 .card {
@@ -428,6 +458,10 @@
 .section-stories {
     padding: 15rem 0;
     position: relative;
+
+    @include responsive(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .story {
@@ -622,9 +656,17 @@
     font-size: 1.4rem;
     color: #f7f7f7;
 
+    @include responsive(tab-port) {
+        padding: 8rem 0;
+    }
+
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
+
+        @include responsive(tab-port) {
+            margin-bottom: 6rem;
+        }
     }
 
     &__logo {
@@ -636,6 +678,11 @@
         border-top: 1px solid #777;
         padding-top: 2rem;
         display: inline-block;
+
+        @include responsive(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list {
@@ -672,6 +719,11 @@
         padding-top: 2rem;
         width: 80%;
         float: right;
+
+        @include responsive(tab-port) {
+            width: 100%;
+            float: none;
+        }
     }
 }
 
