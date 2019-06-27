@@ -16,10 +16,18 @@
 
 .mb-medium {
     margin-bottom: 4rem !important;
+
+    @include responsive(tab-port) {
+        margin-bottom: 3rem !important;
+    }
 }
 
 .mb-large {
     margin-bottom: 8rem !important;
+
+    @include responsive(tab-port) {
+        margin-bottom: 5rem !important;
+    }
 }
 
 .mt-small {
@@ -229,19 +237,43 @@
         transition: all .2s;
         outline-offset: 2rem;
 
+        @include responsive(tab-port) {
+            float: left;
+            position: relative;
+            width: 33.33333%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+        }
+
         &--p1 {
             left: 0;
             top: -2rem;
+
+            @include responsive(tab-port) {
+                top: 0;
+                transform: scale(1.2);
+            }
         }
 
         &--p2 {
             right: 0;
             top: 2rem;
+
+            @include responsive(tab-port) {
+                top: -1rem;
+                transform: scale(1.3);
+                z-index: 100;
+            }
         }
 
         &--p3 {
             left: 20%;
             top: 10rem;
+
+            @include responsive(tab-port) {
+                top: 1rem;
+                left: 0;
+                transform: scale(1.1);
+            }
         }
 
         &:hover {
@@ -270,7 +302,7 @@
     }
 
     @include responsive(tab-port) {
-        padding: 20rem 0;
+        padding: 10rem 0;
     }
 }
 
@@ -283,6 +315,10 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
     transition: all .2s;
 
+    @include responsive(tab-port) {
+        padding: 2rem;
+    }
+
     &__icon {
         font-size: 6rem;
         margin-bottom: .5rem;
@@ -290,6 +326,10 @@
         background-clip: text;
         display: inline-block;
         color: transparent;
+
+        @include responsive(tab-port) {
+            margin-bottom: 0;
+        }
     }
 
     &__text {
@@ -446,6 +486,50 @@
         font-weight: 100;
     }
 
+    @include responsive(tab-port) {
+        height: auto;
+        border-radius: .3rem;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+        &__side {
+            height: auto;
+            transition: all .8s ease;
+            position: relative;
+            box-shadow: none;
+
+            &--back {
+                transform: rotateY(0deg);
+                clip-path: polygon(0% 15%, 100% 0, 100% 100%, 0% 100%);
+            }
+        }
+
+        &__cta {
+            position: relative;
+            top: 0%;
+            left: 0;
+            width: 100%;
+            transform: translate(0);
+            padding: 7rem 4rem 4rem 4rem;
+        }
+
+        &__details {
+            padding: 0 1rem;
+        }
+
+        &__price-box {
+            margin-bottom: 3rem;
+        }
+
+        &__price-value {
+            font-size: 4rem;
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(0deg);
+        }
+    }
+
     &:hover &__side--front {
         transform: rotateY(-180deg);
     }
@@ -475,6 +559,16 @@
     font-size: 1.6rem;
     transform: skewX(-12deg);
 
+    @include responsive(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include responsive(phone) {
+        transform: skewX(0deg);
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -483,6 +577,10 @@
         clip-path: circle(50% at 50% 50%); //defines the shape's look itself
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+
+        @include responsive(phone) {
+            transform: translateX(-3rem) skewX(0deg);
+        }
     }
 
     &__image {
@@ -493,6 +591,10 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include responsive(phone) {
+            transform: skewX(0deg);
+        }
     }
 
     &__caption {
@@ -544,14 +646,31 @@
 
 .book {
     background-image: linear-gradient(105deg, rgba($color-white, .85) 0%, rgba($color-white, .85) 50%, transparent 50%), url(../assets/nat-10.jpg); //use percentages to stop the gradients at certain points
-    background-size: 100%; //100% is the same as cover
+    background-size: 100%; //100% is the same as cover but makes sure it fits the X or width;
     border-radius: .3rem;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
-    height: 50rem;
+
+    @include responsive(tab-land) {
+        background-size: cover;
+        background-image: linear-gradient(105deg, rgba($color-white, .85) 0%, rgba($color-white, .85) 65%, transparent 65%), url(../assets/nat-10.jpg); //use percentages to stop the gradients at certain points
+    }
+
+    @include responsive(tab-port) {
+        background-size: cover;
+        background-image: linear-gradient(to right, rgba($color-white, .85) 0%, rgba($color-white, .85) 100%), url(../assets/nat-10.jpg); //use percentages to stop the gradients at certain points
+    }
 
     &__form {
         width: 50%;
         padding: 6rem;
+
+        @include responsive(tab-land) {
+            width: 65%;
+        }
+
+        @include responsive(tab-port) {
+            width: 100%;
+        }
     }
 }
 
@@ -572,6 +691,10 @@
         border-bottom: .3rem solid transparent;
         width: 90%;
         display: block;
+
+        @include responsive(tab-port) {
+            width: 100%;
+        }
 
         &:focus { //used to remove the blue border on click
             outline: none;
@@ -604,8 +727,13 @@
     }
 
     &__radio-group {
-        width: 50%;
+        width: 49%;
         display: inline-block;
+
+        @include responsive(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 
     &__radio-input {
